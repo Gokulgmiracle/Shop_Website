@@ -1,5 +1,6 @@
-import React from 'react'
-import { navLinks } from '../constants'
+import React from 'react';
+import { navLinks } from '../constants';
+import { Button } from 'react-bootstrap';
 
 const Navbar = () => {
   return (
@@ -15,6 +16,8 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
+
+            <Button>Button</Button>
         </nav>
     </header>
   )
