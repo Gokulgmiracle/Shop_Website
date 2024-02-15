@@ -1,20 +1,32 @@
 import { useState } from "react";
-import Header from "./Header.jsx";
-import Content from "./Content.jsx";
-import Footer from "./Footer.jsx";
-import "./App.css";
-import "./Sytle.css"
+import React from "react";
+import { Footer,Hero,Content} from "./sections";
+import "./index.css"
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
 
+
+/*The Hero and other sections are in the webpage only, I gave position absolute for header,so they are behind the header*/
+
   return (
-    <div className="App">
-      <Header title={"Tailor Shop"} />
+    <main className="App">
+
+    <Navbar />
+    
+    <section>
+      <Hero />
+    </section>
+
+    <section>
       <Content />
+    </section>
+
+    <section>
       <Footer />
-    </div>
+    </section>
+    </main>
   );
 }
-
 export default App;
