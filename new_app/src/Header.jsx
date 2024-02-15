@@ -1,9 +1,16 @@
-import React from 'react'
+import Navbar from "./Navbar.jsx";
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
-    <div>Header</div>
-  )
-}
+    <header className="header">
+      <h1 className="header-title">{title}</h1>
+      <Navbar />
+    </header>
+  );
+};
 
-export default Header
+Header.defaultProps = {
+  title: "Default Title",
+};
+
+export default Header;
